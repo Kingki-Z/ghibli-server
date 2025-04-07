@@ -165,7 +165,8 @@ app.post('/delete', (req, res) => {
   res.json({ success: true, msg: '删除成功' });
 });
 
-// 启动服务
-app.listen(3000, () => {
-  console.log('✅ 服务器启动成功：http://localhost:3000');
+// 启动服务，监听所有 IP 地址
+app.listen(3000, '0.0.0.0', () => {
+  console.log('✅ 服务器启动成功：http://0.0.0.0:3000');
 });
+
